@@ -1,14 +1,14 @@
 
 
-toggleDarkMode.addEventListener('change', (e) =>{ // <--- modifier pour charger une autre stylesheet ???
-    if (e.target.value = 'dark') {
-        body.style.backgroundColor = 'darkgray';
-        body.style.color = 'white';
-    } else {
-        body.style.backgroundColor = '';
-        body.style.color = '';
-    }
-})
+// toggleDarkMode.addEventListener('change', (e) =>{ // <--- modifier pour charger une autre stylesheet ???
+//     if (e.target.value = 'dark') {
+//         body.style.backgroundColor = 'darkgray';
+//         body.style.color = 'white';
+//     } else {
+//         body.style.backgroundColor = '';
+//         body.style.color = '';
+//     }
+// })
 
 let burgers = [
     { image: 'img/bacon_burger.png', title: 'Le Gourmet Grillé', price: '15', category: ['Angus', 'Cheese'], description: 'Plongez dans une expérience culinaire inoubliable avec notre "Gourmet Grillé" - un succulent mariage de bacon croustillant et de viande grillée à la flamme, sublimé par une généreuse dose de notre sauce barbecue maison.' },
@@ -28,8 +28,8 @@ let burgers = [
     { image: 'img/avocado_burger.png', title: 'Burger Avocado Bliss', price: '22', category: ['Specialité'], description: 'Plongez dans la fraîcheur crémeuse de notre "Burger Avocado Bliss" - une expérience délicate qui marie la tendreté d\'un burger grillé avec la richesse veloutée de l\'avocat. Accompagné d\'ingrédients frais tels que des tomates juteuses et de la laitue croquante, ce burger offre une symphonie de saveurs équilibrées pour une expérience gastronomique où la simplicité de l\'avocat s\'unit à la perfection grillée du burger.' }
 ];
 
-burgersSection-burgerCard-content-footer-quantity
-burgersSection-burgerCard-content-footer-submit
+// burgersSection-burgerCard-content-footer-quantity
+// burgersSection-burgerCard-content-footer-submit
 // Ajout du rond rouge 
 let notification = (e) => {
     let iconPanier = document.querySelector('.panier'); // Changer quand Hanen a terminé
