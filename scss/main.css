@@ -67,25 +67,16 @@ table {
     display: none; }
 
 body {
-<<<<<<< HEAD
-  background-color: #FEBC15; }
-=======
   background-color: white;
   border-color: black;
   font-family: "Barlow";
   width: 90%;
   margin: auto;
 }
->>>>>>> 9308d676666ccd3c006a821ca1bb67fe07da0f2e
 
 .sectionHeader {
   background-color: white;
   border-style: solid;
-<<<<<<< HEAD
-  border-color: black; }
-
-/*# sourceMappingURL=main.css.map */
-=======
   border-color: black;
   padding-top: 39px;
 }
@@ -142,4 +133,3 @@ body {
 .sectionFooter {
   background-color: black;
 }/*# sourceMappingURL=main.css.map */
->>>>>>> 9308d676666ccd3c006a821ca1bb67fe07da0f2e
