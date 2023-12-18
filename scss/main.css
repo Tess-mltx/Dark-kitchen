@@ -50,4 +50,16 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+body {
+  background-color: #FEBC15;
+}
+
+.section_header {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-style: solid;
+  border-color: black;
 }/*# sourceMappingURL=main.css.map */
