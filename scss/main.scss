@@ -8,6 +8,41 @@
 @import './base/base.scss';
 
 
+// Tess
+$primary: hsl(43, 99%, 54%);
+$on-primary:hsl(43, 99%, 10%);
+$background: hsl(43, 99%, 5%);
+$on-background: hsl(43, 99%, 95%);
+
+
+#burgersSection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.burgersSection-burgerCard {
+    background-color: $background;
+    color: $on-background;
+    border-radius: 50px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    &-image {
+        max-width: 70%;
+        aspect-ratio: 3/2;
+    };
+    &-content-description{
+        display: none;
+    }
+ }
+
+
+// fin Tess
+
 body{
     background-color: #FEBC15;
 }
