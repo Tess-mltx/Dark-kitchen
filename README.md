@@ -9,8 +9,9 @@ x Create burger-card HTML
 - Create footer HTML / CSS 
 - Create footer HTML / CSS
 
-- Create array JS
-- Create fct add / remove cart
+x Create array JS
+x Create fct displayCard
+- Create fct add / remove cart (panier)
 x Create fct dark mode
-- Ceate fct category 
+x Ceate fct category 
 
