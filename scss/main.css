@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -53,13 +54,84 @@ table {
 }
 
 body {
+  display: flex;
   background-color: #FEBC15;
+  border-color: black;
+  font-family: "Barlow";
+}
+
+header {
+  margin-top: 5%;
+  margin-left: 10%;
 }
 
 .section_header {
-  display: flex;
-  justify-content: center;
   background-color: white;
   border-style: solid;
   border-color: black;
+  width: 360px;
+  height: 250px;
+}
+
+.burger_btn {
+  margin-left: 50%;
+  margin-top: 10%;
+}
+
+.header_h1 {
+  margin-bottom: 10%;
+}
+
+.header_h2 {
+  color: #FEBC15;
+}
+
+.section text {
+  display: flex;
+  flex-direction: column;
+}
+
+.header_text {
+  margin-top: 10%;
+  margin-left: 5%;
+}
+
+.nav_barre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px; /* Ajustez la hauteur selon vos besoins */
+}
+
+.search-container-wrapper {
+  border: 2px solid #FEBC15;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+/* i c Espacement entre l'icône et le champ de recherche */
+i {
+  margin-right: 10px;
+}
+
+#search-bar {
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.footer {
+  display: flex;
+}
+
+.section_footer {
+  background-color: black;
+  height: 64px;
+  width: 360px;
 }/*# sourceMappingURL=main.css.map */
