@@ -6,19 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dark kitchen</title>
     <!-- ajouts tess -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="scss/main.css">
     <script defer src="js/script.js"></script>
     <script src="https://kit.fontawesome.com/f0baf4ae6a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- ajouts tess -->
-    <header class="header">
-        <span class="header-logo"><img class="header-logo-img" src="" alt="Logo du restaurant"></span>
-        <nav class="navigation">
-            <ul class="navigation-list">
-                <li class="navigation-list-item"></li>
-            </ul>
-        </nav>
+
+    <header>
+        <section class="nav">
+            <img class="nav_img" src="img/becode-logo.png" alt="icon of a man">
+            
+            <button class="hamburger_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </section>
+    </section>
+       
+</header>
+        <section>
+            <h1 class="header_h1">Burger Delivery</h1>
+            <h2 class="header_h2">Enjoy Burger at home</h2>
+
+            <nav class="nav_barre">
+                    <div class="search-container">
+                        <i class="fa-solid fa-magnifying-glass">
+                        <input type="text" id="search-bar"  placeholder="Search"></i>
+                    </div>
+            </nav>
+        </section>
         <section class="burgersSection">
             <!--partie a retirer-->
             <article class="burgersSection-burgerCard">
@@ -39,13 +54,7 @@
             </article>
             <!--fin de partie à retirer-->
         </section>
-        <section class="toggle-darkmode-section">
-            <h2 class="toggle-darkmode-section-title">Mode selector</h2>
-            <select class="toggle-darkmode-section-selection" name="toggle-darkmode" id="toggle-darkmode">
-              <option value="dark">Dark Mode</option>
-              <option value="light" selected>Light Mode</option>
-            </select>
-        </section>
+       
     </header>
     <main>
 

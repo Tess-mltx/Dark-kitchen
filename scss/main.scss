@@ -5,4 +5,17 @@
 @import './vendors/reset';
 @import './utils/variables';
 @import './utils/mixins';
-@import './base/base.scss'
+@import './base/base.scss';
+
+
+body{
+    background-color: #FEBC15;
+}
+.section_header{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+}
+
