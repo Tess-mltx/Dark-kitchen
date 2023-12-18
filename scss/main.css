@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -54,84 +53,69 @@ table {
 }
 
 body {
-  display: flex;
-  background-color: #FEBC15;
+  background-color: white;
   border-color: black;
   font-family: "Barlow";
+  width: 90%;
+  margin: auto;
 }
 
-header {
-  margin-top: 5%;
-  margin-left: 10%;
-}
-
-.section_header {
+.sectionHeader {
   background-color: white;
   border-style: solid;
   border-color: black;
-  width: 360px;
-  height: 250px;
+  padding-top: 39px;
 }
-
-.burger_btn {
-  margin-left: 50%;
-  margin-top: 10%;
+.sectionHeader__first {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
-
-.header_h1 {
-  margin-bottom: 10%;
+.sectionHeader__first__logo {
+  height: 35px;
 }
-
-.header_h2 {
+.sectionHeader__first__burger {
+  border: none;
+  background-color: transparent;
+}
+.sectionHeader__first__burger .fa-solid {
+  font-size: 30px;
+}
+.sectionHeader__headerText__h1 {
+  font-weight: bold;
+}
+.sectionHeader__headerText__h2 {
+  margin-top: 10px;
   color: #FEBC15;
 }
-
-.section text {
-  display: flex;
-  flex-direction: column;
-}
-
-.header_text {
-  margin-top: 10%;
-  margin-left: 5%;
-}
-
-.nav_barre {
+.sectionHeader__navBarre {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80px; /* Ajustez la hauteur selon vos besoins */
+  margin-top: 15px;
+  margin-bottom: 26px;
 }
-
-.search-container-wrapper {
+.sectionHeader__navBarre__wrapper {
   border: 2px solid #FEBC15;
-  border-radius: 15px;
+  border-radius: 40px;
   padding: 10px;
+  width: 100%;
 }
-
-.search-container {
+.sectionHeader__navBarre__wrapper__container {
   display: flex;
   align-items: center;
 }
-
-/* i c Espacement entre l'icône et le champ de recherche */
-i {
-  margin-right: 10px;
+.sectionHeader__navBarre__wrapper__container i {
+  color: grey;
+  margin-left: 15px;
 }
-
-#search-bar {
+.sectionHeader__navBarre__wrapper__container #search-bar {
   padding: 10px;
   border: none;
   outline: none;
   border-radius: 5px;
 }
 
-.footer {
-  display: flex;
-}
-
-.section_footer {
+.sectionFooter {
   background-color: black;
-  height: 64px;
-  width: 360px;
 }/*# sourceMappingURL=main.css.map */
