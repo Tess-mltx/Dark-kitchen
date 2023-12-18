@@ -1,4 +1,4 @@
-
+gi
 
 toggleDarkMode.addEventListener('change', (e) =>{ // <--- modifier pour charger une autre stylesheet ???
     if (e.target.value = 'dark') {
