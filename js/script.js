@@ -131,7 +131,7 @@ let cartItems = [];
 function addToCart(item) {
 cartItems.push(item);
 console.log(item)
-//updateCart();
+upDateCart();
 }
 console.log(cartItems)
 
