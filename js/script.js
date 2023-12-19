@@ -150,42 +150,46 @@ function GenerateCard(burgers) {
 let cartItems = [];
 function addToCart(item) {
 cartItems.push(item);
-console.log(cartItems);
 }
 
 
-// function upDateCart() {
-//     let sectionCart = document.getElementsByClassName("sectionCart-cartContainer");
-//     let totalPrice
-//     sectionCart.innerHTML = "";
-//     cartItems.forEach(select => {
-//         let article = document.createElement("div");
-//             let img = document.createElement("img");
-//             let title = document.createElement("h3");
-//             let qte = document.createElement("strong");
-//             let price = document.createElement("p");
-//         article.classList.add("sectionCart-cartContainer-article");
-//             img.classList.add("sectionCart-cartContainer-article-image");
-//                 img.setAttribute("src", select.image);
-//                 img.setAttribute("alt", select.title);
-//             title.classList.add("sectionCart-cartContainer-article-title")
-//             qte.classList.add("sectionCart-cartContainer-article-quantite")
-//             price.classList.add("sectionCart-cartContainer-article-price");
-//         sectionCart.appendChild(article);
-//         article.appendChild(img);
-//         article.appendChild(title);
-//             title.appendChild(select.title);
-//         article.appendChild(qte);
-//             qte.appendChild(select.quantity)
-//         article.appendChild(price);
-//             price.appendChild(document.createTextNode(select.price * select.quantity + " €"));
-//     }) 
+function upDateCart() {
+    let sectionCart = document.querySelector(".sectionCart-cartContainer");
+    let total = 0;
+        for( let elem of cartItems){
+            let article = document.createElement("div");
+            article.classList.add("sectionCart-cartContainer-article");
 
-//     totalPrice = document.createElement("strong");
-//         totalPrice.classList.add("sectionCart-cartContainer-article-total");
-//     article.appendChild(totalPrice);
-//     totalPrice.appendChild(createTextNode("Total de votre commande : " + "créer le calcul"))
-// }
+            let img = document.createElement("img");
+            img.classList.add("sectionCart-cartContainer-article-image");
+            img.setAttribute("src", elem.image);
+            img.setAttribute("alt", elem.title);
+
+            let title = document.createElement("h3");
+            title.classList.add("sectionCart-cartContainer-article-title");
+            title.innerHTML = elem.title;
+
+            let qte = document.createElement("strong");
+            qte.classList.add("sectionCart-cartContainer-article-quantite");
+            qte.innerHTML = elem.quantity;
+            
+            let price = document.createElement("p");
+            price.classList.add("sectionCart-cartContainer-article-price");
+            price.innerHTML = elem.price;
+            article.append(img);
+            article.append(title);
+            article.append(qte);
+            article.append(price);
+            sectionCart.append(article);
+            total = total + (elem.price * elem.quantity);
+    }
+    let visualisationTotal = document.createElement('p');
+    visualisationTotal.innerHTML = total + " € ";
+    sectionCart.append(visualisationTotal);
+}
+
+let buttonPanier = document.querySelector('#panierButton');
+buttonPanier.addEventListener('click', upDateCart);
 
 function showAllCards() {
     sectionCard.innerHTML = "";

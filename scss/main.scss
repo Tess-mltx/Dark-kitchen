@@ -164,8 +164,17 @@ header, main{
         }
     } 
 }
-
-
+.sectionCart{
+    height : 1000px;
+    &-cartContainer{
+        &-article{
+            &-image{
+                height : 150px;
+                width : 150px;
+            }
+        }
+    }
+}
 .pageFooter{
     position: fixed;
     width : 100%;

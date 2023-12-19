@@ -267,6 +267,14 @@ header, main {
   border-radius: 40px;
 }
 
+.sectionCart {
+  height: 1000px;
+}
+.sectionCart-cartContainer-article-image {
+  height: 150px;
+  width: 150px;
+}
+
 .pageFooter {
   position: fixed;
   width: 100%;
