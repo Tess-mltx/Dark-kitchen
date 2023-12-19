@@ -47,6 +47,9 @@ body{
     background-color: white;
     border-color: black;
     font-family:"Barlow";
+
+}
+header, main{
     width : 90%;
     margin : auto;
 }
@@ -110,10 +113,46 @@ body{
     } 
 }
 
-
-.sectionFooter{
+.pageFooter{
+    position: fixed;
+    width : 100%;
+    bottom : 0;
+    &__button{
+        background-color: white;
+        border : none;
+        height : 70px;
+        width : 70px;
+        border-radius : 64px;
+        position : absolute;
+        right: 40%;
+        top: -18px;
+        margin : auto;
+        i{
+            font-size : 38px;
+            color: #FEBC15;
+        }
+    }
+    &__sectionFooter{
     background-color: black;
-    display: flex;
-    justify-content: space-evenly;
-     
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    height : 64px;
+    border : 2px solid #FEBC15;
+        &__main{
+            width : 90%;
+            margin : auto;
+            display: flex;
+            justify-content: space-between;
+            &__first, &__second{
+                display : flex;
+                width: 40%;
+                justify-content: space-around;
+                margin-top : 19px;
+                i{
+                    font-size : 26px;
+                    color: #FEBC15;
+                }
+            }
+        }
+    }
 }

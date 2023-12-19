@@ -20,56 +20,70 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block; }
+  display: block;
+}
 
 body {
-  line-height: 1; }
+  line-height: 1;
+}
 
 ol, ul {
-  list-style: none; }
+  list-style: none;
+}
 
 blockquote, q {
-  quotes: none; }
+  quotes: none;
+}
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
-  content: none; }
+  content: "";
+  content: none;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 #burgersSection {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+}
 
 .burgersSection-burgerCard {
-  background-color: #191200;
-  color: #fff8e6;
+  background-color: hsl(43, 99%, 5%);
+  color: hsl(43, 99%, 95%);
   border-radius: 50px;
   width: 45%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; }
-  .burgersSection-burgerCard-image {
-    max-width: 70%;
-    aspect-ratio: 3/2; }
-  .burgersSection-burgerCard-content-description {
-    display: none; }
+  align-items: flex-start;
+}
+.burgersSection-burgerCard-image {
+  max-width: 70%;
+  aspect-ratio: 3/2;
+}
+.burgersSection-burgerCard-content-description {
+  display: none;
+}
 
 body {
   background-color: white;
   border-color: black;
   font-family: "Barlow";
+}
+
+header, main {
   width: 90%;
   margin: auto;
 }
@@ -130,6 +144,46 @@ body {
   border-radius: 5px;
 }
 
-.sectionFooter {
+.pageFooter {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+.pageFooter__button {
+  background-color: white;
+  border: none;
+  height: 70px;
+  width: 70px;
+  border-radius: 64px;
+  position: absolute;
+  right: 40%;
+  top: -18px;
+  margin: auto;
+}
+.pageFooter__button i {
+  font-size: 38px;
+  color: #FEBC15;
+}
+.pageFooter__sectionFooter {
   background-color: black;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  height: 64px;
+  border: 2px solid #FEBC15;
+}
+.pageFooter__sectionFooter__main {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.pageFooter__sectionFooter__main__first, .pageFooter__sectionFooter__main__second {
+  display: flex;
+  width: 40%;
+  justify-content: space-around;
+  margin-top: 19px;
+}
+.pageFooter__sectionFooter__main__first i, .pageFooter__sectionFooter__main__second i {
+  font-size: 26px;
+  color: #FEBC15;
 }/*# sourceMappingURL=main.css.map */
