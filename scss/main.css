@@ -52,34 +52,152 @@ table {
   border-spacing: 0;
 }
 
+input[type=number] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.number-input {
+  border: 0;
+  display: inline-flex;
+}
+
+.number-input,
+.number-input * {
+  box-sizing: border-box;
+}
+
+.number-input button {
+  outline: none;
+  background-color: #FEBC15;
+  border: solid 1px #FEBC15;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  margin: 0;
+  position: relative;
+  box-shadow: 0px 0px 1px #FEBC15;
+}
+
+.button1 {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.button2 {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.number-input button:before,
+.number-input button:after {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  width: 1rem;
+  height: 2px;
+  background-color: #FEBC15;
+  transform: translate(-50%, -50%);
+  background-color: white;
+}
+
+.number-input button.plus:after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.number-input input[type=number] {
+  font-family: sans-serif;
+  max-width: 5rem;
+  padding: 0.5rem;
+  border: none;
+  border-width: 0 2px;
+  font-size: 1.2rem;
+  height: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #FEBC15;
+}
+
 #burgersSection {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: flex-start;
 }
-
-.burgersSection-burgerCard {
-  background-color: hsl(43, 99%, 5%);
-  color: hsl(43, 99%, 95%);
-  border-radius: 50px;
-  width: 45%;
-  padding: 2%;
-  margin-bottom: auto;
-  margin-top: 0;
-  align-items: center;
-}
-.burgersSection-burgerCard-image {
-  max-width: 70%;
-  aspect-ratio: 3/2;
-}
-.burgersSection-burgerCard-content {
+#burgersSection .burgersSection-burgerCard {
+  background: #080808;
   width: 100%;
-  margin-block: 30px;
+  text-align: center;
+  margin: 16px;
+  border-radius: 15px;
 }
-.burgersSection-burgerCard-content-description {
+#burgersSection .burgersSection-burgerCard-image {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  margin-top: 30px;
+  background: rgb(148, 148, 148);
+  background: radial-gradient(circle, rgb(148, 148, 148) 0%, rgb(8, 8, 8) 79%);
+}
+#burgersSection .burgersSection-burgerCard-content {
+  width: 90%;
+  margin: 12px 12px;
+  color: white;
+  text-align: left;
+}
+#burgersSection .burgersSection-burgerCard-content-divTitle {
+  display: flex;
+  justify-content: space-between;
+}
+#burgersSection .burgersSection-burgerCard-content-divTitle-title {
+  font-size: 25px;
+  width: 65%;
+}
+#burgersSection .burgersSection-burgerCard-content-divTitle-price {
+  width: 30%;
+  font-size: 25px;
+}
+#burgersSection .burgersSection-burgerCard-content-categoryList {
   display: none;
+}
+#burgersSection .burgersSection-burgerCard-content-footer {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+#burgersSection .burgersSection-burgerCard-content-footer-submit {
+  background-color: transparent;
+  border: solid 1px #FEBC15;
+  border-radius: 50%;
+}
+#burgersSection .burgersSection-burgerCard-content-footer-submit i {
+  color: white;
+  font-size: 15px;
+  padding: 5px;
+}
+#burgersSection .burgersSection-burgerCard-content-icon {
+  text-align: center;
+  margin-top: 15px;
+}
+#burgersSection .burgersSection-burgerCard-content-icon i {
+  margin-bottom: 15px;
+}
+#burgersSection .burgersSection-burgerCard-content-icon-description {
+  display: none;
+}
+#burgersSection .burgersSection-burgerCard-content-icon-description-visible {
+  display: block;
+}
+#burgersSection .burgersSection-burgerCard-content-icon-reverse {
+  transform: rotate(180deg);
 }
 
 body {
@@ -175,6 +293,7 @@ header, main {
   border-top-right-radius: 30px;
   height: 64px;
   border: 2px solid #FEBC15;
+  box-shadow: 1px 7px 20px 0px white;
 }
 .pageFooter__sectionFooter__main {
   width: 90%;

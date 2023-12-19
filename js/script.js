@@ -34,11 +34,10 @@ function GenerateCard(burgers) {
     let ulCategories = document.createElement("ul");
     let liCategorie;
     let containerIcon = document.createElement("span");
-    let iconReadMore = document.createElement("i");
-    let description = document.createElement("p");
+   
+    
     let footerArticle = document.createElement("footer")
     let price = document.createElement("strong");
-    let quantity = document.createElement("input");
     let addPanier = document.createElement("button");
     let buttonIcon = document.createElement("i");
 
@@ -47,21 +46,27 @@ function GenerateCard(burgers) {
         image.setAttribute("src", burgers.image);
         image.setAttribute("alt", burgers.title);
     contentSection.classList.add("burgersSection-burgerCard-content");
-    title.classList.add("burgersSection-burgerCard-content-title");
+    title.classList.add("burgersSection-burgerCard-content-divTitle-title");
     ulCategories.classList.add("burgersSection-burgerCard-content-categoryList");
     containerIcon.classList.add("burgersSection-burgerCard-content-icon");
-    iconReadMore.classList.add("fa-solid", "fa-arrow-down");
-    description.classList.add("burgersSection-burgerCard-content-description");
+    
+   
     footerArticle.classList.add("burgersSection-burgerCard-content-footer");
-    price.classList.add("burgersSection-burgerCard-content-footer-price");
-    quantity.classList.add("burgersSection-burgerCard-content-footer-quantity");
     addPanier.classList.add("burgersSection-burgerCard-content-footer-submit");
     buttonIcon.classList.add("fa-solid" , "fa-cart-shopping");
+    price.classList.add("burgersSection-burgerCard-content-divTitle-price");
+
+
 
     article.appendChild(image);
     article.appendChild(contentSection);
-        contentSection.appendChild(title);
-            title.appendChild(document.createTextNode(burgers.title));
+       
+        let divTitle = document.createElement('div');
+        divTitle.classList.add("burgersSection-burgerCard-content-divTitle");
+        title.appendChild(document.createTextNode(burgers.title));
+        divTitle.append(title);
+        contentSection.appendChild(divTitle);
+            
         contentSection.appendChild(ulCategories);
             burgers.category.forEach((item) => {
                 liCategorie = document.createElement("li");
@@ -70,16 +75,47 @@ function GenerateCard(burgers) {
                 ulCategories.appendChild(liCategorie);
             });
         contentSection.appendChild(containerIcon);
-        contentSection.appendChild(iconReadMore);
-        contentSection.appendChild(description);
-            description.appendChild(document.createTextNode(burgers.description));
+    
+          
         contentSection.appendChild(footerArticle);
-            footerArticle.appendChild(price);
+            divTitle.appendChild(price);
                 price.appendChild(document.createTextNode(burgers.price + " € "));
+            
+          let quantity=document.createElement('div');
+          quantity.innerHTML = `
+            <div class="number-input">
+                <button  class="button1" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                <input class="quantity" min="0" name="quantity" value="0" type="number">
+                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus button2"></button>
+            </div>`;
             footerArticle.appendChild(quantity);
-                quantity.appendChild(document.createTextNode(burgers.quantity));
             footerArticle.appendChild(addPanier);
                 addPanier.appendChild(buttonIcon);
+
+           
+
+            let iconReadMore = document.createElement("i");
+            iconReadMore.classList.add("fa-solid", "fa-arrow-down");
+            let description = document.createElement("p");
+            description.classList.add("burgersSection-burgerCard-content-icon-description");
+            description.appendChild(document.createTextNode(burgers.description));
+            let divIcon = document.createElement('div');
+            divIcon.classList.add("burgersSection-burgerCard-content-icon");
+            divIcon.append(iconReadMore);
+            divIcon.append(description);
+            contentSection.append(divIcon);
+
+
+            
+
+            let visibility = () =>{
+                description.classList.toggle('burgersSection-burgerCard-content-icon-description-visible');
+                iconReadMore.classList.toggle('burgersSection-burgerCard-content-icon-reverse');
+            }
+
+            iconReadMore.addEventListener('click', visibility);
+
+
     
     return article;
 }
