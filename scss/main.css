@@ -75,7 +75,12 @@ body {
   border-color: black;
   font-family: "Barlow";
   width: 90%;
+<<<<<<< HEAD
   margin: auto; }
+=======
+  margin: auto;
+}
+>>>>>>> 9b79a2a43da3344074a704ba20e9c4f36a9f4a11
 
 .sectionHeader {
   background-color: white;
@@ -122,6 +127,11 @@ body {
           border-radius: 5px; }
 
 .sectionFooter {
+<<<<<<< HEAD
   background-color: black; }
 
 /*# sourceMappingURL=main.css.map */
+=======
+  background-color: black;
+}/*# sourceMappingURL=main.css.map */
+>>>>>>> 9b79a2a43da3344074a704ba20e9c4f36a9f4a11
