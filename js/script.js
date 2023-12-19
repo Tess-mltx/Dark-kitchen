@@ -75,31 +75,47 @@ function GenerateCard(burgers) {
                 ulCategories.appendChild(liCategorie);
             });
         contentSection.appendChild(containerIcon);
-    
-          
         contentSection.appendChild(footerArticle);
             divTitle.appendChild(price);
                 price.appendChild(document.createTextNode(burgers.price + " € "));
             
-          let quantity=document.createElement('div');
-          quantity.innerHTML = `
-            <div class="number-input">
-                <button  class="button1" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
-                <input class="quantity" min="0" name="quantity" value="0" type="number">
-                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus button2"></button>
-            </div>`;
-            footerArticle.appendChild(quantity);
-            footerArticle.appendChild(addPanier);
-                addPanier.appendChild(buttonIcon);
+          let quantityDiv = document.createElement('div');
+            let quantityDiv_Inside = document.createElement('div');
+            quantityDiv_Inside.classList.add("number-input");
+            quantityDiv.append(quantityDiv_Inside);
+            let buttondown = document.createElement('button');
+            buttondown.classList.add("button1");
+            buttondown.onclick = function() {
+                let input = this.parentNode.querySelector('input[type=number]');
+                if (input) {
+                    input.stepDown();
+                }
+            };
+            
+            quantityDiv_Inside.append(buttondown);
+            let inputQuantity = document.createElement('input');
+            inputQuantity.classList.add("quantity");
+            inputQuantity.min = "0";
+            inputQuantity.value = "0";
+            inputQuantity.name = "quantity";
+            inputQuantity.type = "number";
+            quantityDiv_Inside.append(inputQuantity);
 
-    addPanier.addEventListener('click', () => {
-    let selectedBurger = {
-        image: burgers.image, title: burgers.title, quantity: parseInt(quantity.value), price: parseInt(burgers.price)
-    }
-    addToCart(selectedBurger)
+            let buttonup = document.createElement('button');
+            buttonup.classList.add("button2");
+            buttonup.classList.add("plus");
+            buttonup.onclick = function() {
+                let input = this.parentNode.querySelector('input[type=number]');
+                if (input) {
+                    input.stepUp();
+                }
+            };
+            quantityDiv_Inside.append(buttonup);
+          
     
-    });
-           
+            footerArticle.appendChild(quantityDiv);
+            footerArticle.appendChild(addPanier);
+            addPanier.appendChild(buttonIcon);
 
             let iconReadMore = document.createElement("i");
             iconReadMore.classList.add("fa-solid", "fa-arrow-down");
@@ -111,17 +127,21 @@ function GenerateCard(burgers) {
             divIcon.append(iconReadMore);
             divIcon.append(description);
             contentSection.append(divIcon);
-
-
-            
-
             let visibility = () =>{
                 description.classList.toggle('burgersSection-burgerCard-content-icon-description-visible');
                 iconReadMore.classList.toggle('burgersSection-burgerCard-content-icon-reverse');
             }
-
             iconReadMore.addEventListener('click', visibility);
+            let quantityBis = document.querySelector('.quantity');
 
+
+            addPanier.addEventListener('click', () => {
+                let selectedBurger = {
+                    image: burgers.image, title: burgers.title, quantity: parseInt(inputQuantity.value), price: parseInt(burgers.price)
+                }
+                addToCart(selectedBurger)
+                });
+                       
 
     
     return article;
@@ -130,43 +150,47 @@ function GenerateCard(burgers) {
 let cartItems = [];
 function addToCart(item) {
 cartItems.push(item);
+<<<<<<< HEAD
 console.log(item)
 upDateCart();
+=======
+console.log(cartItems);
+>>>>>>> d31f4236be3d4d269b77fb0ea913151c9f4692c5
 }
-console.log(cartItems)
 
-function upDateCart() {
-    let sectionCart = document.getElementsByClassName("sectionCart-cartContainer");
-    let totalPrice
-    sectionCart.innerHTML = "";
-    cartItems.forEach(select => {
-        let article = document.createElement("div");
-            let img = document.createElement("img");
-            let title = document.createElement("h3");
-            let qte = document.createElement("strong");
-            let price = document.createElement("p");
-        article.classList.add("sectionCart-cartContainer-article");
-            img.classList.add("sectionCart-cartContainer-article-image");
-                img.setAttribute("src", select.image);
-                img.setAttribute("alt", select.title);
-            title.classList.add("sectionCart-cartContainer-article-title")
-            qte.classList.add("sectionCart-cartContainer-article-quantite")
-            price.classList.add("sectionCart-cartContainer-article-price");
-        sectionCart.appendChild(article);
-        article.appendChild(img);
-        article.appendChild(title);
-            title.appendChild(select.title);
-        article.appendChild(qte);
-            qte.appendChild(select.quantity)
-        article.appendChild(price);
-            price.appendChild(document.createTextNode(select.price * select.quantity + " €"));
-    }) 
 
-    totalPrice = document.createElement("strong");
-        totalPrice.classList.add("sectionCart-cartContainer-article-total");
-    article.appendChild(totalPrice);
-    totalPrice.appendChild(createTextNode("Total de votre commande : " + "créer le calcul"))
-}
+// function upDateCart() {
+//     let sectionCart = document.getElementsByClassName("sectionCart-cartContainer");
+//     let totalPrice
+//     sectionCart.innerHTML = "";
+//     cartItems.forEach(select => {
+//         let article = document.createElement("div");
+//             let img = document.createElement("img");
+//             let title = document.createElement("h3");
+//             let qte = document.createElement("strong");
+//             let price = document.createElement("p");
+//         article.classList.add("sectionCart-cartContainer-article");
+//             img.classList.add("sectionCart-cartContainer-article-image");
+//                 img.setAttribute("src", select.image);
+//                 img.setAttribute("alt", select.title);
+//             title.classList.add("sectionCart-cartContainer-article-title")
+//             qte.classList.add("sectionCart-cartContainer-article-quantite")
+//             price.classList.add("sectionCart-cartContainer-article-price");
+//         sectionCart.appendChild(article);
+//         article.appendChild(img);
+//         article.appendChild(title);
+//             title.appendChild(select.title);
+//         article.appendChild(qte);
+//             qte.appendChild(select.quantity)
+//         article.appendChild(price);
+//             price.appendChild(document.createTextNode(select.price * select.quantity + " €"));
+//     }) 
+
+//     totalPrice = document.createElement("strong");
+//         totalPrice.classList.add("sectionCart-cartContainer-article-total");
+//     article.appendChild(totalPrice);
+//     totalPrice.appendChild(createTextNode("Total de votre commande : " + "créer le calcul"))
+// }
 
 function showAllCards() {
     sectionCard.innerHTML = "";
