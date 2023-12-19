@@ -152,7 +152,6 @@ function addToCart(item) {
 cartItems.push(item);
 }
 
-
 function upDateCart() {
     let sectionCart = document.querySelector(".sectionCart-cartContainer");
     let total = 0;
