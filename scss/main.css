@@ -20,51 +20,62 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block; }
+  display: block;
+}
 
 body {
-  line-height: 1; }
+  line-height: 1;
+}
 
 ol, ul {
-  list-style: none; }
+  list-style: none;
+}
 
 blockquote, q {
-  quotes: none; }
+  quotes: none;
+}
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
-  content: none; }
+  content: "";
+  content: none;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 #burgersSection {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+}
 
 .burgersSection-burgerCard {
-  background-color: #191200;
-  color: #fff8e6;
+  background-color: hsl(43, 99%, 5%);
+  color: hsl(43, 99%, 95%);
   border-radius: 50px;
   width: 45%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; }
-  .burgersSection-burgerCard-image {
-    max-width: 70%;
-    aspect-ratio: 3/2; }
-  .burgersSection-burgerCard-content-description {
-    display: none; }
+  align-items: flex-start;
+}
+.burgersSection-burgerCard-image {
+  max-width: 70%;
+  aspect-ratio: 3/2;
+}
+.burgersSection-burgerCard-content-description {
+  display: none;
+}
 
 body {
   background-color: white;
@@ -127,9 +138,31 @@ body {
   padding: 10px;
   border: none;
   outline: none;
-  border-radius: 5px;
+  border-radius: 40px;
 }
 
 .sectionFooter {
   background-color: black;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.categories {
+  margin-left: 24px;
+  margin-bottom: 26px;
+  display: flex;
+  flex-direction: column;
+}
+.categories__list {
+  margin-top: 20px;
+}
+.categories__list_item {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+}
+.categories__list_item:hover {
+  border: 2px solid #FEBC15;
+  border-radius: 40px;
 }/*# sourceMappingURL=main.css.map */
