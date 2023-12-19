@@ -80,8 +80,57 @@ function GenerateCard(burgers) {
                 quantity.appendChild(document.createTextNode(burgers.quantity));
             footerArticle.appendChild(addPanier);
                 addPanier.appendChild(buttonIcon);
+
+    addPanier.addEventListener('click', () => {
+    let selectedBurger = {
+        image: burgers.image, title: burgers.title, quantity: parseInt(quantity.value), price: parseInt(burgers.price)
+    }
+    addToCart(selectedBurger)
+    
+    });
     
     return article;
+}
+
+let cartItems = [];
+function addToCart(item) {
+cartItems.push(item);
+console.log(item)
+//updateCart();
+}
+console.log(cartItems)
+
+function upDateCart() {
+    let sectionCart = document.getElementsByClassName("sectionCart-cartContainer");
+    let totalPrice
+    sectionCart.innerHTML = "";
+    cartItems.forEach(select => {
+        let article = document.createElement("div");
+            let img = document.createElement("img");
+            let title = document.createElement("h3");
+            let qte = document.createElement("strong");
+            let price = document.createElement("p");
+        article.classList.add("sectionCart-cartContainer-article");
+            img.classList.add("sectionCart-cartContainer-article-image");
+                img.setAttribute("src", select.image);
+                img.setAttribute("alt", select.title);
+            title.classList.add("sectionCart-cartContainer-article-title")
+            qte.classList.add("sectionCart-cartContainer-article-quantite")
+            price.classList.add("sectionCart-cartContainer-article-price");
+        sectionCart.appendChild(article);
+        article.appendChild(img);
+        article.appendChild(title);
+            title.appendChild(select.title);
+        article.appendChild(qte);
+            qte.appendChild(select.quantity)
+        article.appendChild(price);
+            price.appendChild(document.createTextNode(select.price * select.quantity + " €"));
+    }) 
+
+    totalPrice = document.createElement("strong");
+        totalPrice.classList.add("sectionCart-cartContainer-article-total");
+    article.appendChild(totalPrice);
+    totalPrice.appendChild(createTextNode("Total de votre commande : " + "créer le calcul"))
 }
 
 function showAllCards() {
@@ -95,8 +144,8 @@ function showAllCards() {
 function showCardsByCategory(category) {
     sectionCard.innerHTML = "";
     let filteredBurgers = burgers.filter((burger) => burger.category.includes(category));
-    filteredBurgers.forEach((manga) => {
-        let card = GenerateCard(manga);
+    filteredBurgers.forEach((burger) => {
+        let card = GenerateCard(burger);
         sectionCard.appendChild(card); // Ajoutez la carte directement à la sectionCard
     });
 }
