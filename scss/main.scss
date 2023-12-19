@@ -28,17 +28,23 @@ $on-background: hsl(43, 99%, 95%);
     color: $on-background;
     border-radius: 50px;
     width: 45%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    padding: 2%;
+    margin-bottom : auto;
+    margin-top : 0;
+    align-items: center ;
     &-image {
         max-width: 70%;
         aspect-ratio: 3/2;
     };
+    &-content {
+        width: 100%;
+        margin-block: 30px;
+    }
     &-content-description{
         display: none;
     }
  }
+
 
 
 // fin Tess
