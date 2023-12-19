@@ -92,7 +92,6 @@ function GenerateCard(burgers) {
             footerArticle.appendChild(addPanier);
                 addPanier.appendChild(buttonIcon);
 
-<<<<<<< HEAD
     addPanier.addEventListener('click', () => {
     let selectedBurger = {
         image: burgers.image, title: burgers.title, quantity: parseInt(quantity.value), price: parseInt(burgers.price)
@@ -100,7 +99,6 @@ function GenerateCard(burgers) {
     addToCart(selectedBurger)
     
     });
-=======
            
 
             let iconReadMore = document.createElement("i");
@@ -125,7 +123,6 @@ function GenerateCard(burgers) {
             iconReadMore.addEventListener('click', visibility);
 
 
->>>>>>> 84e49c4785dcd52e9b7cac456ba5a8d7387fb7d1
     
     return article;
 }
