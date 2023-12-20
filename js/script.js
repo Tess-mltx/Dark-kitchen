@@ -234,10 +234,13 @@ document.addEventListener("DOMContentLoaded", showAllCards);
 let toggleDarkMode = document.getElementById("toggle-darkmode")
 toggleDarkMode.addEventListener('change', (e) =>{ 
     let body = document.querySelector("body")
-    if (e.target.value = 'dark') {
-        body.classList.add("darkMode")
-    } else {
-        body.classList.remove("darkMode")
+    switch (e.target.value) {
+        case "dark" : 
+            body.classList.add("darkMode");
+            break;
+        case "light" :
+            body.classList.remove("darkMode");
+            break;
     }
 })
 
