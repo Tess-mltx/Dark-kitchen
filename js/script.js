@@ -174,7 +174,7 @@ function upDateCart() {
             
             let price = document.createElement("p");
             price.classList.add("sectionCart-cartContainer-article-price");
-            price.innerHTML = elem.price;
+            price.innerHTML = elem.price + " € ";
             article.append(img);
             article.append(title);
             article.append(qte);
@@ -183,12 +183,25 @@ function upDateCart() {
             total = total + (elem.price * elem.quantity);
     }
     let visualisationTotal = document.createElement('p');
-    visualisationTotal.innerHTML = total + " € ";
+    visualisationTotal.classList.add('sectionCart-cartContainer-Montant')
+    visualisationTotal.innerHTML = "Montant total = " + total + " € ";
     sectionCart.append(visualisationTotal);
+    
 }
 
+let visibilityCart = () =>{
+    let cartContainer = document.querySelector(".sectionCart-cartContainer");
+    cartContainer.innerHTML = "";
+    upDateCart();
+    let sectionCart = document.querySelector('.sectionCart');
+    sectionCart.classList.toggle('sectionCart-visible');
+}
+
+
 let buttonPanier = document.querySelector('#panierButton');
-buttonPanier.addEventListener('click', upDateCart);
+buttonPanier.addEventListener('click', visibilityCart);
+
+
 
 function showAllCards() {
     sectionCard.innerHTML = "";

@@ -268,7 +268,38 @@ header, main {
 }
 
 .sectionCart {
-  height: 1000px;
+  background-color: white;
+  border: 1px solid orange;
+  border-radius: 15px;
+  position: fixed;
+  width: 80%;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%);
+  display: none;
+}
+.sectionCart-visible {
+  display: block;
+}
+.sectionCart-header {
+  display: flex;
+  margin: 15px 15px;
+  justify-content: space-between;
+}
+.sectionCart-header-icon i:hover {
+  color: red;
+}
+.sectionCart-cartContainer-Montant {
+  float: right;
+  margin-bottom: 15px;
+  margin: 15px;
+  font-size: 1.2rem;
+  margin-right: 40px;
+}
+.sectionCart-cartContainer-article {
+  display: flex;
+  justify-content: space-around;
+  line-height: 150px;
 }
 .sectionCart-cartContainer-article-image {
   height: 150px;
