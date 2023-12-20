@@ -126,6 +126,18 @@ input[type=number]::-webkit-outer-spin-button {
   color: #FEBC15;
 }
 
+.toggle-darkmode {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 20px;
+  border: 2px solid hsl(43, 99%, 54%);
+  padding: 4px 8px;
+}
+.toggle-darkmode:focus-visible {
+  border: 2px solid hsl(43, 99%, 54%);
+}
+
 #burgersSection {
   display: flex;
   flex-direction: row;

@@ -1,3 +1,8 @@
+$primary-dark: hsl(43, 99%, 54%);
+$on-primary-dark:hsl(43, 99%, 10%);
+$background-dark: hsl(43, 99%, 5%);
+$on-background-dark: hsl(43, 99%, 95%);
+
 //test 
 input[type="number"] {
     -webkit-appearance: textfield;
@@ -69,5 +74,14 @@ input[type="number"] {
     text-align: center;
     color:#FEBC15;
   }
-
+// toggle darkMode
+.toggle-darkmode {
+  appearance: none;
+  border-radius: 20px;
+  border: 2px solid $primary-dark;
+  padding: 4px 8px;
+    &:focus-visible {
+    border: 2px solid $primary-dark;
+    }
+  }
 
