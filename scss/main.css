@@ -165,8 +165,9 @@ input[type=number]::-webkit-outer-spin-button {
   justify-content: space-between;
 }
 #burgersSection .burgersSection-burgerCard-content-divTitle-title {
-  font-size: 25px;
+  font-size: 20px;
   width: 65%;
+  height: 50px;
 }
 #burgersSection .burgersSection-burgerCard-content-divTitle-price {
   width: 30%;
@@ -397,6 +398,34 @@ header, main {
 .darkMode {
   background-color: #080808;
 }
+.darkMode #burgersSection .burgersSection-burgerCard-image {
+  background: transparent;
+}
+.darkMode .sectionHeader__navBarre__wrapper {
+  background-color: white;
+}
+.darkMode .sectionHeader__headerText__h1 {
+  color: white;
+}
+.darkMode .categories__list_item {
+  background-color: #080808;
+  color: white;
+}
 .darkMode .sectionHeader {
   background-color: #080808;
+}
+.darkMode .burgersSection-burgerCard {
+  background-color: white !important;
+}
+.darkMode .number-input input[type=number] {
+  border: 1px solid #FEBC15;
+}
+.darkMode .burgersSection-burgerCard-content-divTitle {
+  color: #080808;
+}
+.darkMode #burgersSection .burgersSection-burgerCard-content-footer-submit i {
+  color: #FEBC15;
+}
+.darkMode .burgersSection-burgerCard-content-icon {
+  color: #080808;
 }/*# sourceMappingURL=main.css.map */

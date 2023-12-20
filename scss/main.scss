@@ -51,8 +51,9 @@ $on-background: hsl(43, 99%, 95%);
                 display : flex;
                 justify-content: space-between;
                 &-title{
-                    font-size : 25px;
+                    font-size : 20px;
                     width : 65%;
+                    height : 50px;
                 }
                 &-price{
                     width : 30%;
@@ -296,8 +297,35 @@ header, main{
 // edit tess
 .darkMode {
     background-color: #080808;
-
+    & #burgersSection .burgersSection-burgerCard-image{
+        background : transparent;
+    }
+    & .sectionHeader__navBarre__wrapper{
+        background-color: white;
+    }
+    & .sectionHeader__headerText__h1{
+        color : white;
+    }
+    & .categories__list_item{
+        background-color: #080808;
+        color : white;
+    }
     & .sectionHeader{
         background-color : #080808;
+    }
+    & .burgersSection-burgerCard{
+        background-color : white !important;
+    }
+    & .number-input input[type=number]{
+        border : 1px solid#FEBC15;    
+    }
+    & .burgersSection-burgerCard-content-divTitle{
+        color : #080808;
+    }
+    & #burgersSection .burgersSection-burgerCard-content-footer-submit i{
+        color : #FEBC15;
+    }
+    & .burgersSection-burgerCard-content-icon{
+        color : #080808;
     }
 }
