@@ -218,14 +218,13 @@ chickenBtn.addEventListener("click", () => showCardsByCategory("Chicken"));
 document.addEventListener("DOMContentLoaded", showAllCards);
 
 
-
-// toggleDarkMode.addEventListener('change', (e) =>{ // <--- modifier pour charger une autre stylesheet ???
-//     if (e.target.value = 'dark') {
-//         body.style.backgroundColor = 'darkgray';
-//         body.style.color = 'white';
-//     } else {
-//         body.style.backgroundColor = '';
-//         body.style.color = '';
-//     }
-// })
+let toggleDarkMode = document.getElementById("toggle-darkmode")
+toggleDarkMode.addEventListener('change', (e) =>{ 
+    let body = document.querySelector("body")
+    if (e.target.value = 'dark') {
+        body.classList.add("darkMode")
+    } else {
+        body.classList.remove("darkMode")
+    }
+})
 
