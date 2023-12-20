@@ -9,6 +9,8 @@
 @import './base/base.scss';
 
 
+
+
 // Tess
 $primary: hsl(43, 99%, 54%);
 $on-primary:hsl(43, 99%, 10%);
@@ -21,12 +23,17 @@ $on-background: hsl(43, 99%, 95%);
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
+    padding-bottom : 80px;
     .burgersSection-burgerCard{
         background: #080808;
         width: 100%;
         text-align: center;
         margin : 16px;
         border-radius : 15px;
+        @include responsive-desktop (550px){
+            max-width : 305px;
+            width : 305px;
+        }
         &-image {
            width : 150px;
            height : 150px;
@@ -192,16 +199,28 @@ header, main{
             float : right;
             margin-bottom : 15px;
             margin : 15px;
-            font-size : 1.2rem;
+            font-size : 1.4rem;
             margin-right : 40px;
         }
         &-article{
             display : flex;
             justify-content: space-around;
             line-height : 150px;
+            @include responsive-mobile (550px){
+                line-height : 90px;
+            }
             &-image{
                 height : 150px;
                 width : 150px;
+            @include responsive-mobile (550px){
+                height : 90px;
+                width : 90px;
+            }
+            &-title{
+                @include responsive-mobile (550px){
+                    font-size: small;
+                }
+            }
             }
         }
     }
@@ -217,7 +236,8 @@ header, main{
         width : 70px;
         border-radius : 64px;
         position : absolute;
-        right: 40%;
+        left : 50%;
+        transform: translate(-50%);
         top: -18px;
         margin : auto;
         i{

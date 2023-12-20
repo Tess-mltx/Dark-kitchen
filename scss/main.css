@@ -131,6 +131,7 @@ input[type=number]::-webkit-outer-spin-button {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
+  padding-bottom: 80px;
 }
 #burgersSection .burgersSection-burgerCard {
   background: #080808;
@@ -138,6 +139,12 @@ input[type=number]::-webkit-outer-spin-button {
   text-align: center;
   margin: 16px;
   border-radius: 15px;
+}
+@media screen and (min-width: 550px) {
+  #burgersSection .burgersSection-burgerCard {
+    max-width: 305px;
+    width: 305px;
+  }
 }
 #burgersSection .burgersSection-burgerCard-image {
   width: 150px;
@@ -292,7 +299,7 @@ header, main {
   float: right;
   margin-bottom: 15px;
   margin: 15px;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-right: 40px;
 }
 .sectionCart-cartContainer-article {
@@ -300,9 +307,25 @@ header, main {
   justify-content: space-around;
   line-height: 150px;
 }
+@media screen and (max-width: 550px) {
+  .sectionCart-cartContainer-article {
+    line-height: 90px;
+  }
+}
 .sectionCart-cartContainer-article-image {
   height: 150px;
   width: 150px;
+}
+@media screen and (max-width: 550px) {
+  .sectionCart-cartContainer-article-image {
+    height: 90px;
+    width: 90px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .sectionCart-cartContainer-article-image-title {
+    font-size: small;
+  }
 }
 
 .pageFooter {
@@ -317,7 +340,8 @@ header, main {
   width: 70px;
   border-radius: 64px;
   position: absolute;
-  right: 40%;
+  left: 50%;
+  transform: translate(-50%);
   top: -18px;
   margin: auto;
 }
