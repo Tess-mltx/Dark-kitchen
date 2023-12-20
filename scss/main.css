@@ -201,7 +201,6 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 body {
-  background-color: white;
   border-color: black;
   font-family: "Barlow";
 }
@@ -369,4 +368,11 @@ header, main {
 .categories__list_item:hover {
   border: 2px solid #FEBC15;
   border-radius: 40px;
+}
+
+.darkMode {
+  background-color: #080808;
+}
+.darkMode .sectionHeader {
+  background-color: #080808;
 }/*# sourceMappingURL=main.css.map */

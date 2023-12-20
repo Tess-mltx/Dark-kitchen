@@ -96,7 +96,6 @@ $on-background: hsl(43, 99%, 95%);
 // fin Tess
 
 body{
-    background-color: white;
     border-color: black;
     font-family:"Barlow";
 
@@ -277,4 +276,8 @@ header, main{
 // edit tess
 .darkMode {
     background-color: #080808;
+
+    & .sectionHeader{
+        background-color : #080808;
+    }
 }
