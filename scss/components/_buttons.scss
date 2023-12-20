@@ -70,4 +70,8 @@ input[type="number"] {
     color:#FEBC15;
   }
 
-
+// toggle darkMode
+.toggle-darkmode {
+  border-radius: 20px;
+  border-color: $primary;
+}
