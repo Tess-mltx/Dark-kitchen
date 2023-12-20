@@ -1,36 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dark kitchen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap"
+        rel="stylesheet">
     <!-- ajouts tess -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="scss/main.css" />
     <script defer src="js/script.js"></script>
+    <script src="https://kit.fontawesome.com/f0baf4ae6a.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <!-- ajouts tess -->
-    <header class="header">
-        <span class="header-logo"><img class="header-logo-img" src="" alt="Logo du restaurant"></span>
-        <nav class="navigation">
-            <ul class="navigation-list">
-                <li class="navigation-list-item"></li>
-            </ul>
-        </nav>
-        <section>
-            <h2>Mode selector</h2>
-            <select name="toggle-darkmode" id="toggle-darkmode">
-              <option value="dark">Dark Mode</option>
-              <option value="light" selected>Light Mode</option>
-            </select>
+    <header>
+        <section class="sectionHeader">
+            <div class="sectionHeader__first">
+                <img class="sectionHeader__first__logo" src="img/vector-burger-png.webp" alt="becode-logo" />
+                <!-- edit tess -->
+                <select class="toggle-darkmode" name="toggle-darkmode" id="toggle-darkmode">
+                    <option value="dark">Dark Mode</option>
+                    <option value="light" selected>Light Mode</option>
+                    </select>
+                <!-- end -->
+            </div>
+            <div class="sectionHeader__headerText">
+                <h1 class="sectionHeader__headerText__h1">Burger Delivery</h1>
+                <h2 class="sectionHeader__headerText__h2">Enjoy Burger at home</h2>
+            </div>
+            <nav class="sectionHeader__navBarre">
+                <div class="sectionHeader__navBarre__wrapper">
+                    <div class="sectionHeader__navBarre__wrapper__container">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="search-bar" placeholder="Search" />
+                    </div>
+                </div>
+            </nav>
+            <div class="categories">
+                <div class="categories__title">
+                    <h2>
+                    List of categories
+                    </h2>
+                </div>
+                <div class="categories__list">
+                    <ul>
+                    <button id="Fish" class="categories__list_item">Fish</button>
+                    <button id="Specialité" class="categories__list_item">Specialité</button>
+                    <button id="Angus" class="categories__list_item">Angus</button>
+                    <button id="Veggie" class="categories__list_item">Veggie</button>
+                    <button id="Cheese" class="categories__list_item">Cheese</button>
+                    <button id="Piquant" class="categories__list_item">Piquant</button>
+                    <button id="Chicken" class="categories__list_item">Chicken</button>
+                    <button id="all" class="categories__list_item">Tous</button>
+                    </ul>
+                </div>
+        </section>   
+</header>
+        <main>
+        <section id="burgersSection">
+        
         </section>
-    </header>
-    <main>
-
+        <section class="sectionCart">
+            <hgroup class="sectionCart-header">
+                <h2 class="sectionCart-header-title">Mon panier</h2>
+            </hgroup>
+            <div class="sectionCart-cartContainer">
+    
+            </div>
+        </section>
     </main>
-    <footer>
-
+    <footer class="pageFooter">
+        <button class="pageFooter__button"> 
+            <i class="fa-solid fa-cart-shopping" id="panierButton"></i>
+        </button>   
+        <section class="pageFooter__sectionFooter">
+            <div class="pageFooter__sectionFooter__main">
+            <div class="pageFooter__sectionFooter__main__first">
+                <i class="fa-solid fa-house"></i>
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="pageFooter__sectionFooter__main__second">
+                <i class="fa-solid fa-comment-dots"></i>
+                <i class="fa-solid fa-user"></i>
+            </div>
+        </div>
+        </section>
     </footer>
+    
 </body>
+
 </html>

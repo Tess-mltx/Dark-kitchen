@@ -1,6 +1,11 @@
 //Mixin pour la média-queries de la version desktop
-@mixin responsive-desktop {
+@mixin responsive-desktop ($break-desktop) {
     @media screen and (min-width : $break-desktop){
+        @content;
+    }
+}
+@mixin responsive-mobile ($break-mobile) {
+    @media screen and (max-width : $break-mobile){
         @content;
     }
 }
